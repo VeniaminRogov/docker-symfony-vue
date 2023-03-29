@@ -33,5 +33,11 @@ restart: down start
 logs:
 	@$(DOCKER_COMPOSE) logs --tail=all --follow
 
-sh:
+php-sh:
 	@$(DOCKER_COMPOSE) exec php-fpm sh
+
+node-sh:
+	@$(DOCKER_COMPOSE) exec node sh
+
+mysql-sh:
+	@$(DOCKER_COMPOSE) exec mysql mysql -uroot -proot api
