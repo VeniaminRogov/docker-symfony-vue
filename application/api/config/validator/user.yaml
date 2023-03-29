@@ -1,0 +1,14 @@
+App\Entity\User:
+  properties:
+    name:
+      - NotBlank:
+          message: 'Name field is empty'
+      - Length:
+          min: 2
+          max: 25
+    email:
+      - NotBlank:
+            message: 'Email field is empty'
+      - Length:
+          min: 2
+          max: 40
