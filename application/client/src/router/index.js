@@ -6,8 +6,9 @@ import GuestLayout from "../components/GuestLayout.vue";
 import Home from "../views/Home.vue";
 import MealsByName from "../views/MealsByName.vue";
 import MealsByLetter from "../views/MealsByLetter.vue";
-import MealsByIngredients from "../views/MealsByIngredients.vue";
+import MealsIngredients from "../views/MealsIngredients.vue";
 import MealDetails from "../views/MealDetails.vue";
+import MealsByIngredients from "../views/MealsByIngredient.vue";
 
 const routes = [
   {
@@ -30,7 +31,12 @@ const routes = [
         component: MealsByLetter,
       },
       {
-        path: "/by-Ingredients/:Ingredients?",
+        path: "/by-ingredients",
+        name: "ingredients",
+        component: MealsIngredients,
+      },
+      {
+        path: "/by-ingredients/ingredient?",
         name: "byIngredients",
         component: MealsByIngredients,
       },
@@ -45,12 +51,6 @@ const routes = [
     path: "/auth",
     component: GuestLayout,
   },
-
-  // {
-  //   path: "/letter/:letter?",
-  //   name: "byLetter",
-  //   component: MealList,
-  // },
 ];
 
 const router = createRouter({
