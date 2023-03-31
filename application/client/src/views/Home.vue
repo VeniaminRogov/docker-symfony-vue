@@ -19,14 +19,16 @@
 </template>
 
 <script setup>
-import { computed, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import store from "../store";
 import axiosClient from "../axiosClient.js";
 
 const letters = "ABCDEFGHIJLKMNOPQRSTUVWXYZ".split("");
+const ingredients = ref([]);
 
 onMounted(async () => {
   const response = await axiosClient.get("/list.php?i=list");
   console.log(response.data);
+  ingredients.value = response.data;
 });
 </script>
