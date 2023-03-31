@@ -1,13 +1,7 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-  <h1 class="bg-blue-500">
-    Hello world!
-  </h1>
+  <router-view />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
